@@ -469,6 +469,7 @@ void Compute(graph<vertex>&, commandLine);
 template<class vertex>
 void Compute(hypergraph<vertex>&, commandLine);
 
+#ifdef LIGRA_MAIN
 int parallel_main(int argc, char* argv[]) {
   commandLine P(argc,argv," [-s] <inFile>");
   char* iFile = P.getArgument(0);
@@ -548,4 +549,5 @@ int parallel_main(int argc, char* argv[]) {
     }
   }
 }
+#endif
 #endif
